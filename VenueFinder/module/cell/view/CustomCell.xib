@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="280" id="FWT-gj-Cue" customClass="CustomCell" customModule="VenueFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FWT-gj-Cue" id="0UK-jE-RtU">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UvT-Cq-XdD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-E2-MQj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-L8-SV7">
+                                        <rect key="frame" x="5" y="253" width="388" height="17"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="VenueDesc" label="Venue Description">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC0-R2-12m">
+                                        <rect key="frame" x="5" y="222.66666666666666" width="388" height="20.333333333333343"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="VenueTitle " label="Venue Title">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-7l-89C">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="212.66666666666666"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="VenueThumnail" label="Venue Thumnail">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-2K-Wz9">
+                                        <rect key="frame" x="291" y="16" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to favourite the venue!" identifier="FavouriteButton" label="Tap to favourite the venue!"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="toggleFavouriteButton:" destination="FWT-gj-Cue" eventType="touchUpInside" id="ZLn-d1-Rhu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="baseView" label="baseView">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="SC0-R2-12m" firstAttribute="top" secondItem="cu3-7l-89C" secondAttribute="bottom" constant="10" id="778-TU-3Od"/>
+                                    <constraint firstItem="Xel-L8-SV7" firstAttribute="top" secondItem="SC0-R2-12m" secondAttribute="bottom" constant="10" id="7KS-sj-vzA"/>
+                                    <constraint firstAttribute="trailing" secondItem="SC0-R2-12m" secondAttribute="trailing" id="8Kj-5N-bda"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xel-L8-SV7" secondAttribute="bottom" constant="10" id="Esf-VL-tkf"/>
+                                    <constraint firstAttribute="trailing" secondItem="cu3-7l-89C" secondAttribute="trailing" id="J78-28-DKg"/>
+                                    <constraint firstItem="cu3-7l-89C" firstAttribute="top" secondItem="n8B-E2-MQj" secondAttribute="top" id="Mak-vI-JOq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xel-L8-SV7" secondAttribute="trailing" id="XRt-64-UZN"/>
+                                    <constraint firstItem="Xel-L8-SV7" firstAttribute="leading" secondItem="n8B-E2-MQj" secondAttribute="leading" constant="5" id="a2D-tK-QBH"/>
+                                    <constraint firstItem="SC0-R2-12m" firstAttribute="leading" secondItem="n8B-E2-MQj" secondAttribute="leading" constant="5" id="hFs-0X-UBv"/>
+                                    <constraint firstItem="cu3-7l-89C" firstAttribute="leading" secondItem="n8B-E2-MQj" secondAttribute="leading" id="lbe-cd-huy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UvT-Cq-XdD" secondAttribute="trailing" id="FUr-Kb-OFo"/>
+                    <constraint firstItem="UvT-Cq-XdD" firstAttribute="top" secondItem="0UK-jE-RtU" secondAttribute="top" id="Mfb-Vu-VSt"/>
+                    <constraint firstItem="UvT-Cq-XdD" firstAttribute="leading" secondItem="0UK-jE-RtU" secondAttribute="leading" id="RBX-sd-NiY"/>
+                    <constraint firstAttribute="bottom" secondItem="UvT-Cq-XdD" secondAttribute="bottom" id="j06-ql-thF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="VenueCell" label="VenueCell">
+                <bool key="isElement" value="NO"/>
+            </accessibility>
+            <connections>
+                <outlet property="baseView" destination="n8B-E2-MQj" id="XGa-VB-hv1"/>
+                <outlet property="descriptionLabel" destination="Xel-L8-SV7" id="MBQ-FT-L6o"/>
+                <outlet property="favouriteButton" destination="fQx-2K-Wz9" id="p7a-Ly-lo3"/>
+                <outlet property="thumbnailImageView" destination="cu3-7l-89C" id="3PH-nv-MDO"/>
+                <outlet property="titleLabel" destination="SC0-R2-12m" id="4Td-gR-enO"/>
+                <outlet property="verticalStackView" destination="UvT-Cq-XdD" id="xbR-fi-kfb"/>
+            </connections>
+            <point key="canvasLocation" x="-530.53435114503816" y="-187.32394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
